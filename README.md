@@ -3,7 +3,7 @@
 A Server-side API built on NodeJS and MongoDB for hospital doctors to keep track of their patients with Covid19 test reports.
 It is built using **MongoDB, ExpressJs, NodeJS and JavaScript.**
 
-Hosted Link: [Hospital API](https://placement-cell-app-1lox.onrender.com/)
+Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
 
 # Functionality
 
