@@ -17,9 +17,9 @@ Hosted Link: [Hospital API](https://placement-cell-app-1lox.onrender.com/)
     - After the checkup, create a Report
 * Patient Report will have the following fields
     - Created by doctor
-    - Status (You can use enums if you want to):
-    - Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine,
-      Positive-Admit]
+    - Status:
+      - Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine,
+        Positive-Admit]
     - Date
 
 ## Getting Started
@@ -39,6 +39,15 @@ npm start
 ```
 The project is running on the port number provided by you.
 
+# Routes in Hospital-API
+
+* /doctors/register → with phone and password
+* /doctors/login → returns the JWT to be used
+* /patients/register
+* /patients/:id/create_report → Create patients report
+* /patients/:id/all_reports → List all the reports of a patient oldest to latest
+* /reports/:status → List all the reports of all the patients filtered by a specific status
+
 ## Tools Used 
 - NodeJS
 - MongoDB
@@ -53,3 +62,5 @@ The project is running on the port number provided by you.
 * mongoose
 * passport
 * passport-jwt
+* mongodb
+* bcryptjs
