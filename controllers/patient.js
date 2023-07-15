@@ -2,6 +2,7 @@ const Patient = require("../models/patient");
 const Report = require("../models/report");
 const Doctor = require("../models/doctor");
 
+
 //registering patients
 module.exports.register = async (req, res) => {
   try {
@@ -20,6 +21,8 @@ module.exports.register = async (req, res) => {
       //patient already exists
       return res.status(422).json({
         message: "A patient already exist with this number",
+        patientId: patient._id,
+        name: patient.name,
       });
     }
   } catch (err) {

@@ -14,7 +14,7 @@ module.exports.createDoctor = async (req, res) => {
     //find the doctor using the phone first before signing up - if email already exists
     let doctor = await Doctor.findOne({ phone: req.body.phone });
 
-    //if doctor doesn't exist - create the user
+    //if doctor doesn't exist - create the doctor
     if (!doctor) {
       await Doctor.create(req.body);
       return res.status(200).json({
@@ -39,11 +39,16 @@ module.exports.createSession = async (req, res) => {
   try {
     //find the doctor if he/she exists using phone no
     let doctor = await Doctor.findOne({ phone: req.body.phone });
-
-    //if do not exists or exists and password do not match
-    if (!doctor || doctor.password !== req.body.password) {
+    if (!doctor) {
       return res.status(422).json({
-        message: "Invalid username or password",
+        message: "Invalid Username",
+      });
+    }
+    //if do not exists or exists and password do not match
+    let isValid = await doctor.isValidPassword(req.body.password);
+    if (!isValid) {
+      return res.status(422).json({
+        message: "Invalid Password",
       });
     }
 

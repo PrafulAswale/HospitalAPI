@@ -7,7 +7,6 @@ const passportJWT = require('./config/passport-jwt-startegy');
 
 app.use(express.urlencoded({ extended: false }));
 
-
 //routes imports
 const doctorRoutes = require("./routes/doctor");
 const patientRoutes = require("./routes/patient");
