@@ -3,8 +3,8 @@
 A Server-side API built on NodeJS and MongoDB for hospital doctors to keep track of their patients with Covid19 test reports.
 It is built using **MongoDB, ExpressJs, NodeJS, and JavaScript.**
 
-Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
-Documentation Link: [Hospital API Doc](https://documenter.getpostman.com/view/28551869/2s946fdsQS)
+* Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
+* Documentation Link: [Hospital API Doc](https://documenter.getpostman.com/view/28551869/2s946fdsQS)
 # Functionality
 
 * There can be 2 types of Users
