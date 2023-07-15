@@ -1,7 +1,5 @@
 const Patient = require("../models/patient");
 const Report = require("../models/report");
-const Doctor = require("../models/doctor");
-
 
 //registering patients
 module.exports.register = async (req, res) => {
@@ -41,8 +39,6 @@ module.exports.createReport = async (req, res) => {
 
     //if patient is present - create report
     if (patient) {
-      let doctor = await Doctor.findById(req.body.doctor);
-
       //create a report for patient
       let reportData = {
         doctor: req.body.doctor,
