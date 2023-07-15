@@ -1,10 +1,10 @@
 # Hospital API
 
 A Server-side API built on NodeJS and MongoDB for hospital doctors to keep track of their patients with Covid19 test reports.
-It is built using **MongoDB, ExpressJs, NodeJS and JavaScript.**
+It is built using **MongoDB, ExpressJs, NodeJS, and JavaScript.**
 
 Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
-
+Documentation Link: [Hospital API Doc](https://documenter.getpostman.com/view/28551869/2s946fdsQS)
 # Functionality
 
 * There can be 2 types of Users
@@ -16,7 +16,7 @@ Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
       return the patient info in the API)
     - After the checkup, create a Report
 * Patient Report will have the following fields
-    - Created by doctor
+    - Created by a doctor
     - Status:
       - Can be either of: [Negative, Travelled-Quarantine, Symptoms-Quarantine,
         Positive-Admit]
@@ -25,7 +25,7 @@ Hosted Link: [Hospital API](https://hospital-api-58bj.onrender.com)
 ## Getting Started
 * Fork the project
 * Clone the forked repository in your local system
-* Create .env file in the root directory and add the following:-
+* Create a .env file in the root directory and add the following:-
     - PORT="Your port number"
     - MONGODB_URL="Your MongoDB URL"
     - SESSION_SECRET_KEY="Your secret session key"
